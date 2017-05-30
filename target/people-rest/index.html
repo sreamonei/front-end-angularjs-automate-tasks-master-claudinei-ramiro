@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="listaPessoas">
+    <head>
+		<title>Lista de Pessoas - Front-End Angular Js</title>
+		<link rel="stylesheet" type="text/css" href="lib/css/estilo.css">
+	    <script type="text/javascript" src="lib/js/angular.min.js"></script>
+	    <script type="text/javascript" src="lib/js/busca-lista.js"></script>
+    </head>
+<body ng-controller="listaPessoasCtrl">
+	<h1 ng-bind="app"></h1>
+	<div class="bloco">
+		<ul>
+	        <li ng-click="showDiv = !showDiv" class="sel" ng-repeat="pessoa in pessoas">
+	        	<div class="nome">{{pessoa.name}}</div>
+	        	<div class="id">ID: {{pessoa.id}}</div>
+	        	<div ng-hide="!showDiv" class="info">{{pessoa.disclosableInfo}}</div>
+	        </li>
+	    </ul>
+	</div>
+</body>
+</html>
