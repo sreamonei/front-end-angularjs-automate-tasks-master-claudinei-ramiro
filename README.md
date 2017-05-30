@@ -1,47 +1,30 @@
 # front-end-angularjs-automate-tasks
+In order to run the application properly, please follow the steps below.
 
-Enclosed in this project, lies a small Java application that expose a 
-REST service that returns a list of People.
+# Step 1 - Setup and Download
+* Download and install NetBeans with JDK 8.
+* Download and install Apache Tomcat (change the http port from 8080 to 8090).
+* Download the project.
 
-This service can be reached using the following URL:
+# Step 2 - Create Project
+Inside NetBeans IDE:
+* Create a new project (Ctrl+Shift+N).
+* Category: Maven, Projects: Project with existing POM.
+* Click Next then Finish.
+* Select location of the downloaded project then Open.
 
-    http://localhost:8090/rest/people
+# Step 3 - Build
+* Right click on the project/Build.
+* Once build is done, It gives a success message on the Output tab, with the address of the .war build folder location.
+* Copy the given address: "project location"\front-end-angularjs-automate-tasks-master\target\people-rest.war
 
-It will return a JSON object. To run the service, you will need to build the application.
-For that, you will need to install Java JDK and Maven.
+# Step 4 - Deploy
+* Turn Apache Tomcat Monitor ON.
+* In your web browser, paste the URL: http://localhost:8090/manager/html
+* Scroll down to "WAR file to deploy".
+* Paste the .war address location and then deploy it.
 
-After you sucessfully installed everything, just open a command and run:
+# Step 5 - Testing
+* Paste the URL: http://localhost:8090/people-rest to see the application working.
 
-
-    mvn clean package
-    
-To run, either call Java or run Maven
-
-    java -jar target/people-rest.war
-    
-or
-
-    mvn spring-boot:run
-    
-## Proposed Exercise
-
-Create an app to present the resulting data from the REST service. The way you present is up to you, as long you follow the premises.
-
-Premises:
-* DO NOT USE *\<table\>*
-* The application must be implemented using _AngularJS_. 
-* The application must be _Responsive_.
-* The application must be presented in only three resolutions: _Full HD_, _HD_ and _Wide VGA_. 
-* Do _not_ use any _layout frameworks_ like Bootstrap, Foundation, etc. Implement your own solution. Feel free to use other frameworks for UX 
-* You are free to change the application included in every aspect.
-
-## Challenges
-
-1. Minify using the Automation Tool of your choice, except MAVEN plugins.
-2. Replace the Java Application by one written using Node.js _or_ ...
-3. ...automate test using an end-to-end test framework for AngularJS. 
-
-
-## Measuring results
-Send the exact instructions on how to install dependencies, compile and run
-the application, in a way even a newbie would understand. 
+Thank you! 
